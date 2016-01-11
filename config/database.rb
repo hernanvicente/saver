@@ -1,7 +1,7 @@
 Sequel::Model.plugin(:schema)
 Sequel::Model.raise_on_save_failure = false # Do not throw exceptions on failure
 Sequel::Model.db = case Padrino.env
-  when :development then Sequel.connect("postgres://localhost/marketplace_development", :loggers => [logger])
+  when :development then Sequel.connect("postgres://postgres:123456@localhost/marketplace_development", :loggers => [logger])
   when :production  then Sequel.connect("postgres://localhost/marketplace_production",  :loggers => [logger])
   when :test        then Sequel.connect("postgres://localhost/marketplace_test",        :loggers => [logger])
 end
