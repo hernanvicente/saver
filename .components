@@ -1,0 +1,9 @@
+---
+:orm: datamapper
+:test: none
+:mock: none
+:script: jquery
+:renderer: haml
+:stylesheet: none
+:namespace: Saver
+:migration_format: number
